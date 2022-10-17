@@ -7,13 +7,12 @@ body, html{
 
 body{
     background: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .social-proof-section-wrapper{
-    margin: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 15px;
     font-family: 'League Spartan', sans-serif;
 }
 
@@ -31,6 +30,8 @@ body{
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
+    max-height: 120px;
+    overflow: hidden;
 }
 
 .texts-wrapper .description{
@@ -40,10 +41,14 @@ body{
     font-weight: 500;
     font-size: 15px;
     margin-bottom: 30px;
+    max-height: 120px;
+    overflow: auto;
 }
 
 .rating-field{
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .rating-field .rating{
@@ -96,13 +101,94 @@ color: white;
 }
 
 .comments .comment-card .profile-description span{
+    font-weight: 700;
     padding: 2px;
 }
 
 .comments .comment-card .profile-description .verified{
+    font-weight: 400;
 color: hsl(333, 80%, 67%);
 }
 
 .comments .comment-card .comment{
+    font-weight: 500;
 line-height: 20px;
+font-size: 16px;
+}
+
+@media(min-width:410px){
+
+    .social-proof-section-wrapper{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .texts-raiting-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .texts-raiting-wrapper .texts-wrapper{
+        text-align: left;
+        justify-content: flex-start;
+        width: 50%;
+    }
+
+    .texts-raiting-wrapper .texts-wrapper .description{
+        margin: 0;
+        font-size: 18px;
+        width: 80%;
+    }
+
+    .texts-raiting-wrapper .texts-wrapper .title{
+        margin: 0 0 30px;
+        font-size: 40px;
+    }
+
+    /* .texts-raiting-wrapper .rating-field{
+        width: 45%;
+    } */
+    .texts-raiting-wrapper .rating-field .rating{
+        width: 400px;
+    }
+
+    .texts-raiting-wrapper .rating-field .rating:nth-child(2){
+        margin-left: 30px;
+    }
+    .texts-raiting-wrapper .rating-field .rating:nth-child(3){
+        margin-left: 60px;
+    }
+
+    .comments{
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+
+    .comments .comment-card{
+        width: 30%;
+    }
+
+    .comments .comment-card:not(:last-child){
+        margin-right: 10px;
+    }
+
+    .comments .comment-card:nth-child(3){
+        margin-top: 60px;
+        margin-bottom: 0px;
+    }
+
+    .comments .comment-card:nth-child(2){
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .comments .comment-card:nth-child(1){
+        margin-top: 0px;
+        margin-bottom: 60px;
+    }
+
 }
